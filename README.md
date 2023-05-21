@@ -2,7 +2,9 @@
 
 Repository for backing up env config files
 
-![](./img/robot-dev.jpg)
+<p align="center">
+  <img src="./img/robot-dev.jpg" />
+</p>
 
 # VIM
 
