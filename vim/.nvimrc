@@ -1,11 +1,11 @@
-set runtimepath+=~/.vim,~/.vim/after
+set rtp+=~/.vim,$NEOVIM_CONFIG/after
 set packpath+=~/.vim
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " # REMAPING KEYS #
-let mapleader = "ç"
+let mapleader = " "
 
 " # VUNDLE PLUGIN MANAGER #
 " set the runtime path to include Vundle and initialize
@@ -69,5 +69,4 @@ nmap s <Plug>(easymotion-overwin-f)
 nmap s <Plug>(easymotion-overwin-f2)
 
 let g:EasyMotion_smartcase = 1
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
+map ç <Plug>(easymotion-prefix)

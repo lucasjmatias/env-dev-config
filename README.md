@@ -34,3 +34,11 @@ cp ./vim/init.vim ~/AppData/local/nvim
 ### 🛠️ vim/.nvimrc
 
 Neovim configuration, its configuration supports **neovim** and **VSCode Neovim** configuration.
+
+> General vim configurations
+
+### 🛠️ vim/after/plugin/keymaps.lua
+
+Neovim keymaps.
+
+> Remapping keys or commands configuration
