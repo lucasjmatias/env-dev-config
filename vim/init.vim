@@ -1,1 +1,1 @@
-source D:/Env/env-dev-config/vim/.nvimrc
+source $NEOVIM_CONFIG/.nvimrc
