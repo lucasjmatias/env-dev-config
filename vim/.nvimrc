@@ -1,3 +1,6 @@
+set runtimepath+=~/.vim,~/.vim/after
+set packpath+=~/.vim
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
