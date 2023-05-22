@@ -1,11 +1,10 @@
+set runtimepath+=~/.vim,$NEOVIM_CONFIG/after
+
 set rtp+=~/.vim,$NEOVIM_CONFIG/after
 set packpath+=~/.vim
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
-" # REMAPING KEYS #
-let mapleader = " "
 
 " # VUNDLE PLUGIN MANAGER #
 " set the runtime path to include Vundle and initialize
@@ -46,6 +45,10 @@ else
 endif
 
 Plugin 'unblevable/quick-scope'
+
+Plugin 'wellle/targets.vim'
+
+Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

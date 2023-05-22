@@ -37,6 +37,12 @@ Neovim configuration, its configuration supports **neovim** and **VSCode Neovim*
 
 > General vim configurations
 
+### 🛠️ vim/after/plugin/defaults.lua
+
+Neovim defaults configuration.
+
+> Change neovim defaults configuration
+
 ### 🛠️ vim/after/plugin/keymaps.lua
 
 Neovim keymaps.
