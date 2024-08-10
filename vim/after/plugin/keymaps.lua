@@ -37,3 +37,41 @@ keymap("n", "<Left>", ":vertical resize +1<CR>", default_opts)
 keymap("n", "<Right>", ":vertical resize -1<CR>", default_opts)
 keymap("n", "<Up>", ":resize -1<CR>", default_opts)
 keymap("n", "<Down>", ":resize +1<CR>", default_opts)
+
+-- Hop config
+local hop = require('hop')
+local directions = require('hop.hint').HintDirection
+hop.setup { keys = 'etovxqpdygfblzhckisuran' }
+vim.keymap.set('', 'f', function()
+  hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
+end, {remap=true})
+vim.keymap.set('', 'F', function()
+  hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
+end, {remap=true})
+vim.keymap.set('', 't', function()
+  hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })
+end, {remap=true})
+vim.keymap.set('', 'T', function()
+  hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
+end, {remap=true})
+
+vim.api.nvim_set_keymap("v", "çj", "<cmd>HopLineAC<CR>", {noremap=true})
+vim.api.nvim_set_keymap("v", "çk", "<cmd>HopLineBC<CR>", {noremap=true})
+vim.api.nvim_set_keymap("v", "çb", "<cmd>HopWordBC<CR>", {noremap=true})
+vim.api.nvim_set_keymap("v", "çw", "<cmd>HopWordAC<CR>", {noremap=true})
+vim.api.nvim_set_keymap("v", "çe", "<cmd>HopWordAC<CR>", {noremap=true})
+
+vim.api.nvim_set_keymap("n", "çj", "<cmd>HopLineAC<CR>", {noremap=true})
+vim.api.nvim_set_keymap("n", "çk", "<cmd>HopLineBC<CR>", {noremap=true})
+vim.api.nvim_set_keymap("n", "çb", "<cmd>HopWordBC<CR>", {noremap=true})
+vim.api.nvim_set_keymap("n", "çw", "<cmd>HopWordAC<CR>", {noremap=true})
+vim.api.nvim_set_keymap("n", "çe", "<cmd>HopWordAC<CR>", {noremap=true})
+vim.api.nvim_set_keymap("n", "çs", "<cmd>HopPattern<CR>", {noremap=true})
+
+-- normal mode (sneak-like)
+vim.api.nvim_set_keymap("n", "s", "<cmd>HopChar2AC<CR>", {noremap=false})
+vim.api.nvim_set_keymap("n", "S", "<cmd>HopChar2BC<CR>", {noremap=false})
+
+-- visual mode (sneak-like)
+vim.api.nvim_set_keymap("v", "s", "<cmd>HopChar2AC<CR>", {noremap=false})
+vim.api.nvim_set_keymap("v", "S", "<cmd>HopChar2BC<CR>", {noremap=false})

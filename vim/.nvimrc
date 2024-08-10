@@ -1,14 +1,14 @@
-set runtimepath+=~/.vim,$NEOVIM_CONFIG/after
+set runtimepath+=~/.config/nvim,$NEOVIM_CONFIG/after
 
-set rtp+=~/.vim,$NEOVIM_CONFIG/after
-set packpath+=~/.vim
+set rtp+=~/.config/nvim,$NEOVIM_CONFIG/after
+set packpath+=~/.config/nvim
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " # VUNDLE PLUGIN MANAGER #
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
@@ -31,18 +31,16 @@ Plugin 'VundleVim/Vundle.vim'
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
-
 if exists('g:vscode')
-    " VSCode extension
-    Plugin 'asvetliakov/vim-easymotion' , {'name': 'vim-easymotion-vs'}
 
     " VSCode quick-scope config
     highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
     highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
 else
     " ordinary Neovim
-   Plugin 'easymotion/vim-easymotion'
 endif
+
+Plugin 'smoka7/hop.nvim'
 
 Plugin 'unblevable/quick-scope'
 
@@ -68,8 +66,9 @@ filetype plugin indent on    " required
 " # EASYMOTION CONFIG: #
 " let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
-nmap s <Plug>(easymotion-overwin-f)
-nmap s <Plug>(easymotion-overwin-f2)
+" nmap s <Plug>(easymotion-overwin-f)
+" nmap s <Plug>(easymotion-overwin-f2)
 
-let g:EasyMotion_smartcase = 1
-map ç <Plug>(easymotion-prefix)
+" let g:EasyMotion_smartcase = 1
+" map ç <Plug>(easymotion-prefix)
+
